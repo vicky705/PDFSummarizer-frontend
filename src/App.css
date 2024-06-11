@@ -1,0 +1,285 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Remove increment and decrement buttons */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0; /* Optional */
+}
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #000000;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+
+
+.container-fluid{
+  padding: 0;
+  margin: 0;
+}
+/* Loading Animation */
+.loading{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background-color: #00000082;
+  backdrop-filter: blur(5px);
+  z-index: 99;
+}
+.loading .animation{
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* /Loading Animation */
+
+/* Login  */
+
+
+.login{
+  background-image: url('./assets/Images/login_background.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login .login-card{
+  width: 600px;
+  background-color: rgba(0, 0, 0, 0.374);
+  backdrop-filter: blur(5px);
+  padding: 50px;
+  border-radius: 10px;
+}
+.login input{
+  width: 100%;
+  padding: 0.5rem 2rem;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid gray;
+  color: #FFFFFF;
+  margin-top: 20px;
+}
+.login .title{
+  text-align: center;
+  color: #FFFFFF;
+}
+.login .center-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login .login-button{
+  margin-top: 30px;
+}
+.login .login-button button:disabled{
+  background-color: #2b2e3f;
+  cursor: not-allowed;
+}
+.login .login-button button:disabled:hover{
+  background-color: #2b2e3f;
+  cursor: not-allowed;
+}
+.login .login-button button{
+  background-color: rgb(59, 69, 134);
+  padding: 0.5rem 5rem;
+  color: #FFFFFF;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  transition: .3s ease-in-out;
+}
+.login .login-button button:hover{
+  background-color: rgb(25, 47, 187);
+}
+.login .forgot-password{
+  margin-top: 20px;
+  display: flex;
+  justify-content: right;
+}
+.login .forgot-password a{
+  color: #FFFFFF;
+  font-weight: 400;
+}
+.login .input-error{
+  border-bottom: 1px solid red;
+}
+@media screen and (max-width: 668px){
+  .login .login-card{
+    padding: 50px 20px;
+  }
+  .login .login-button button{
+    width: 100%;
+  }
+}
+/* /Login  */
+
+/* Upload File */
+.upload-file{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+.upload-file .upload-container{
+  width: 600px;
+  height: 400px;
+  border: 2px dashed black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  gap: 50px;
+}
+.select-btn{
+  padding: .5rem 5rem;
+  border: none;
+  outline: none;
+  background-color: #03A9F4;
+  color: #ffffff;
+  border-radius: 5px;
+}
+@media screen and (max-width: 668px){
+  .upload-file{
+    padding: 20px;
+  }
+  .upload-file .upload-container{
+    width: 100%;
+  }
+}
+/* /Upload File */
+
+/* PDF Viwer */
+.selected-file{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  padding: 0px;
+  
+}
+.selected-file .left-div{
+  width: 80%;
+}
+.selected-file .right-div{
+  width: 20%;
+  position: relative;
+}
+.selected-file .left-div .pdf-viewer{
+  width: 100%;
+  height: 100vh;
+}
+.selected-file .select-btn{
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
+/* /PDF Viwer */
+
+/* Chating area */
+
+.chat-area .chats{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  max-width: 50rem;
+  margin: 0px auto;
+}
+.chats .chat-section{
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0px;
+}
+.chats .message-box form{
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  background-color: aqua;
+}
+.chats .message-box form input{
+  width: 100%;
+  padding: 5px 10px;
+  border: none;
+  outline: none;
+}
+.chats .message-box form button{
+  padding: 0px 10px;
+  border: none;
+  outline: none;
+  background-color: #03A9F4;
+  color: white;
+  font-weight: 500;
+}
+.send-message{
+  display: flex;
+  justify-content: right;
+}
+.recieve-message{
+  display: flex;
+  justify-content: left;
+}
+.send-message p,
+.recieve-message p{
+  border: 1px solid rgba(128, 128, 128, 0.464);
+  max-width: 400px;
+  display: flex;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0px 0px 10px 0px #8080805e;
+  margin: 0;
+  width: 400px;
+  flex-direction: column;
+}
+
+/* /Chating area */
+.drop-zone {
+  border: 2px dashed #007bff;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.drop-zone.drag-over {
+  background-color: #e6f7ff;
+}
+
+.nav{
+  font-size: 20px;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  padding-right: 10px;
+}
+.nav p{
+  cursor: pointer;
+}
+.error{
+  color: red;
+  padding: 10px 30px 0px 30px;
+  margin-bottom: 0px;
+}
